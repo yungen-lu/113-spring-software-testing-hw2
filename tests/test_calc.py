@@ -51,3 +51,33 @@ def test_multiply():
 
     # Test case 4: Multiplying by zero
     assert calc.multiply(5, 0) == 0
+
+
+def test_divide():
+    # Create an instance of the Calculator class
+    calc = Calculator()
+
+    # Test case 1: Dividing two positive numbers with integer result
+    assert calc.divide(6, 2) == 3
+
+    # Test case 2: Dividing a positive and a negative number with integer result
+    assert calc.divide(-6, 2) == -3
+
+    # Test case 3: Dividing two negative numbers with integer result
+    assert calc.divide(-6, -2) == 3
+
+    # Test case 4: Dividing by zero should raise an exception
+    with pytest.raises(ValueError):
+        calc.divide(5, 0)
+        
+    # Test case 5: Dividing with floating-point result
+    assert calc.divide(5, 2) == 2.5
+    
+    # Test case 6: Dividing with floating-point result (negative)
+    assert calc.divide(-5, 2) == -2.5
+    
+    # Test case 7: Dividing with floating-point result (both negative)
+    assert calc.divide(-5, -2) == 2.5
+    
+    # Test case 8: Dividing with floating-point result (smaller number)
+    assert calc.divide(2, 5) == 0.4
