@@ -34,3 +34,20 @@ def test_subtract():
 
     # Test case 4: Subtracting zero
     assert calc.subtract(5, 0) == 5
+
+
+def test_multiply():
+    # Create an instance of the Calculator class
+    calc = Calculator()
+
+    # Test case 1: Multiplying two positive numbers
+    assert calc.multiply(2, 3) == 6
+
+    # Test case 2: Multiplying a positive and a negative number
+    assert calc.multiply(-2, 3) == -6
+
+    # Test case 3: Multiplying two negative numbers
+    assert calc.multiply(-2, -3) == 6
+
+    # Test case 4: Multiplying by zero
+    assert calc.multiply(5, 0) == 0
